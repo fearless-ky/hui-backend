@@ -1,0 +1,55 @@
+body {
+	background-color: #EEEEEE;
+	margin-top: 35px;
+}
+
+header span {
+	float: right;
+	padding-top: 6px;
+}
+
+header img {
+	height: 22px;
+	width: 13px;
+	padding-top: 6px;
+	float: left;
+}
+
+.footer {
+	width: 100%;
+	height: 80px;
+	background-color: white;
+	position: relative;
+	top: 10px;
+}
+
+.footer .footer-center {
+	height: 80px;
+	line-height: 20px;
+	position: relative;
+}
+
+.footer .footer-center #footer-span1 {
+	position: relative;
+	left: 20px;
+	color: #000000;
+	top: 5px;
+}
+
+.footer .footer-center #footer-span2 {
+	position: relative;
+	left: 20px;
+	top: 20px;
+}
+
+.footer .footer-center #footer-span3 {
+	position: relative;
+	float: right;
+	right: 20px;
+	transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-webkit-transform: translateY(-150%);
+	-ms-transform: translateY(-100%);
+	color: green;
+	font-size: 24px;
+}

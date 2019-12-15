@@ -1,0 +1,220 @@
+body {
+	font-size: 1.6rem;
+	background-color: #FAFAFA;
+	height: 100%;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 12px;
+}
+
+@media ( min-width : 376px) and (max-width: 414px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media ( min-width : 415px) and (max-width: 639px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media ( min-width : 640px) and (max-width: 719px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media ( min-width : 720px) and (max-width: 749px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media ( min-width : 750px) and (max-width: 799px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media ( min-width : 800px) and (max-width: 992px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+#header {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+#return {
+	margin-left: 3%;
+	width: 10px;
+	height: 18px;
+}
+
+.toptitle {
+	margin: 0 auto;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+/*tians: 浏览器窗口布局 start */
+.page-container {
+	min-height: calc(100vh - 56px);
+	margin: 0 auto;
+}
+
+.chat-wrap {
+	position: absolute;
+	top: 19px;
+	bottom: 10px;
+	width: 100%;
+	margin: 3% auto;
+	overflow: hidden;
+}
+
+.chat-record {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 88%;
+	padding: 0 3% 0 3%;
+	margin-top: 6%;
+	background-color: #FAFAFA;
+}
+
+/*tians: 浏览器窗口布局 end */
+
+/*tians: 聊天窗口布局 start */
+.chat-message {
+	box-sizing: border-box;
+	position: relative;
+	overflow-y: auto;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.chat-message li {
+	margin-top: 15px;
+}
+
+.chat-message .item-myself .figure, .chat-message .item-friend .figure {
+	width: 39px;
+}
+
+.chat-message .item-friend .figure {
+	float: left;
+	margin-right: 10px;
+}
+
+.chat-message .item-myself .figure {
+	float: right;
+	margin-left: 10px;
+}
+
+.chat-message img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.chat-message .item-myself .text, .chat-message .item-friend .text {
+	position: relative;
+	background: #FFFFFF;
+	line-height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+	word-break: break-all;
+	max-width: 200px;
+	border: 1px solid #EDEDED;
+}
+
+.chat-message .item-friend .text {
+	float: left;
+	text-align: right;
+}
+
+.chat-message .item-myself .text {
+	float: right;
+	text-align: left;
+}
+
+/*tians: 聊天窗口布局 end */
+
+/*tians: 聊天输入编辑器 start */
+.chat-editer {
+	position: fixed;
+	bottom: 0;
+	padding: 0 20px;
+	background-color: #FFFFFF;
+}
+
+.chat-input {
+	height: 4.4%;
+	width: 74%;
+	border: 1px solid #3593EE;
+	padding: 0 10px 0 5px;
+	color: #000;
+	outline: none;
+	overflow: auto;
+}
+
+/*tians: 聊天输入编辑器 end */
+
+/*伪元素清楚浮动*/
+.chat-record li:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	overflow: hidden;
+	content: "";
+}
+
+/*利用伪元素实现聊天内容左侧三角*/
+.chat-message .item-friend .text::before, .chat-message .item-myself .text::after
+	{
+	content: '';
+	position: absolute;
+	top: 5px;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	vertical-align: baseline;
+}
+
+.chat-message .item-friend .text::before {
+	border-right: 8px solid #EFEFEF;
+	left: -14px;
+}
+
+.chat-message .item-myself .text::after {
+	border-left: 8px solid #EFEFEF;
+	right: -14px;
+}
+
+.sendbtn {
+	width: 16%;
+	height: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-left: 2%;
+	border-radius: 6px;
+	background-color: #0AB52A;
+}

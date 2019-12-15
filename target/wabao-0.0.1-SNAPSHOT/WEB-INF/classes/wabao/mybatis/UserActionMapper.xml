@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wabao.dao.UserActionDao">
+	<select id="userLogin" resultType="wabao.pojo.WbUser">
+		select * from wb_user where username=#{username}
+		<if test="password != null and password != ''">
+			and password=#{password}
+		</if>
+	</select>
+	<insert id="addUser" useGeneratedKeys="true" keyColumn="uid"
+		keyProperty="uid">
+		insert into
+		wb_user(username,password,gold,energy,invest_count,rgister_date,Superior,level,share_code,appkey)
+		values(#{username},#{password},#{gold},#{energy},#{invest_count},#{rgister_date},#{Superior},#{level},#{share_code},#{appkey})
+	</insert>
+
+	<update id="updateShareCode" parameterType="wabao.pojo.WbUser">
+		update wb_user set
+		share_code=#{share_code} where uid=#{uid}
+	</update>
+
+	<select id="selectKey" resultType="java.lang.Integer">
+		SELECT MAX(UID) from wb_user
+	</select>
+	<delete id="deleteAddress" parameterType="wabao.pojo.WbAddress">
+		DELETE FROM wb_user_address WHERE aid=#{aid}
+	</delete>
+	<select id="selectSM" resultType="java.lang.Integer"
+		parameterType="wabao.pojo.WbUser">
+		select uid from wb_user where superior=#{uid}
+	</select>
+	<update id="updategold" parameterType="wabao.pojo.WbUser">
+		update wb_user set gold =
+		gold+#{gold} where uid = #{uid}
+	</update>
+
+
+</mapper>

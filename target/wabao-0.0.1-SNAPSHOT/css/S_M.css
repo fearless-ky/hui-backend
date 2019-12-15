@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+}
+
+.gold {
+	max-width: 100%;
+	height: 100%;
+}
+
+.head {
+	height: 44px;
+}
+
+.head span {
+	width: 10px;
+	height: 10px;
+}
+
+.head .mui-title {
+	font-size: 12px;
+}
+
+.footer {
+	height: 100%;
+	background-color: whitesmoke;
+}
+
+.footer .footer-center {
+	position: relative;
+	height: 50px;
+}
+
+.footer .footer-center p {
+	display: inline-block;
+	font-size: 16px;
+}
+
+.footer .footer-center #p1 {
+	position: absolute;
+	left: 20%;
+}
+
+.footer .footer-center #p2 {
+	position: absolute;
+	left: 43%;
+}
+
+.footer .footer-center #p3 {
+	position: absolute;
+	left: 68%;
+}
+
+.footer .footer-center1 {
+	position: relative;
+	height: 50px;
+}
+
+.footer .footer-center1 p {
+	display: inline-block;
+	font-size: 16px;
+}
+
+.footer .footer-center1 #p1 {
+	position: absolute;
+}
+
+.footer .footer-center1 #p2 {
+	position: absolute;
+	left: 43%;
+}
+
+.footer .footer-center1 #p3 {
+	position: absolute;
+	left: 75%;
+}

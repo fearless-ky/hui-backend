@@ -1,0 +1,5 @@
+   为什么会一直定位删除会员  是应为用了一个   style="display: block;"   所以 他就是一直打开的状态
+   艹
+ 让很大的数据在一行显示  在<td>里面加一个<div>
+ <div style="overflow:scroll;  text-overflow:ellipsis;height: 80px;" th:text="${book.title}"></div>
+ <td>里面设置宽度   <td style="width: 90px" >    就行了

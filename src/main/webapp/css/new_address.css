@@ -1,0 +1,179 @@
+html {
+	font-size: 12px;
+}
+
+section div:hover {
+	background-color: #FAFAFA;
+}
+
+section div:active {
+	background-color: #EFEFEF;
+}
+
+@media ( min-width : 376px) and (max-width: 414px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media ( min-width : 415px) and (max-width: 639px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media ( min-width : 640px) and (max-width: 719px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media ( min-width : 720px) and (max-width: 749px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media ( min-width : 750px) and (max-width: 799px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media ( min-width : 800px) and (max-width: 992px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+body {
+	margin: 0;
+	font-size: 1.6rem;
+	background-color: #FAFAFA;
+}
+
+#header {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+#return {
+	margin-left: 3%;
+	width: 10px;
+	height: 18px;
+}
+
+#add-address {
+	margin: 0 auto;
+}
+
+#middle {
+	margin-top: 5%;
+}
+
+.menu {
+	background-color: #FFFFFF;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	margin-top: 2%;
+	display: flex;
+	align-items: center;
+}
+
+.input-text {
+	outline: none;
+	position: absolute;
+	right: 3%;
+	text-align: right;
+}
+
+.right-img {
+	right: 3%;
+	position: absolute;
+	width: 12px;
+	height: 20px;
+}
+
+#lastaddress {
+	width: 100%;
+	outline: none;
+	padding-left: 3%;
+	padding-right: 3%;
+	resize: none;
+}
+
+.round-rect {
+	
+}
+
+.round {
+	border-radius: 50%;
+	background-color: #FFFFFF;
+	position: absolute;
+	height: 16px;
+	width: 16px;
+	transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	/* Firefox 4 */
+	-webkit-transition: all .1s ease-in;
+	/* Safari and Chrome */
+	-o-transition: all .1s ease-in;
+	/* Opera */
+}
+
+input[type="checkbox"]+label {
+	right: 3%;
+	position: absolute;
+	border-radius: 18px;
+	width: 40px;
+	height: 18px;
+	background-color: #CFCFCF;
+	display: flex;
+	align-items: center;
+	transition: all .1s ease-in;
+	-moz-transition: all .1s ease-in;
+	/* Firefox 4 */
+	-webkit-transition: all .1s ease-in;
+	/* Safari and Chrome */
+	-o-transition: all .1s ease-in;
+	/* Opera */
+	padding-left: 2px;
+}
+
+input[type="checkbox"]:checked+label {
+	background-color: #08B42A;
+}
+
+input[type="checkbox"]:checked+label div {
+	right: 2px;
+	left: none;
+}
+
+.bottom-button {
+	background-color: #08B42A;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 6%;
+	color: #FFFFFF;
+}
+
+select {
+	width: 100%;
+	position: absolute;
+	font-size: 20px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	padding-left: 3%;
+	display: flex;
+	justify-content: center;
+	border: none;
+}
+
+select:focus {
+	outline: none;
+}

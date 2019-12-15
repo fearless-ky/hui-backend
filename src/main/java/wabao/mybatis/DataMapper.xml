@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wabao.dao.UserDataDao">
+	<select id="selectOneUser" resultType="wabao.pojo.WbUser">
+		select * from wb_user
+		where uid=#{uid}
+	</select>
+
+	<select id="selectCenterData" resultType="java.util.Map">
+		select *,(select nick
+		from wb_user_info where uid=#{uid}) as 'nick',(select photourl from
+		wb_user_info where uid=#{uid}) as 'photourl' from wb_user where
+		uid=#{uid}
+	</select>
+	<select id="selectAddressList" resultType="java.util.Map">
+		select *,(select
+		fullname from wb_area as a where a.areacode=b.city) as 'fullname' from
+		wb_user_address as b where uid=#{uid}
+	</select>
+
+	<select id="selectAddress" resultType="java.util.Map">
+		select *,(select fullname
+		from wb_area as a where a.areacode=b.city) as 'fullname' from
+		wb_user_address as b where aid=#{aid}
+	</select>
+</mapper>

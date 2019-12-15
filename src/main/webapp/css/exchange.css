@@ -1,0 +1,82 @@
+.exchange .head {
+	height: 0px;
+}
+
+.contion .contion-cd {
+	margin-top: 20px;
+	position: relative;
+	background-color: white;
+	height: 120px;
+	top: 50px;
+}
+
+.contion .contion-cd .img1 {
+	position: absolute;
+	left: 0;
+}
+
+.contion .contion-cd .img1 img {
+	position: relative;
+	top: 15px;
+	width: 90px;
+	height: 90px;
+}
+
+.contion .contion-cd .textmiddle {
+	position: relative;
+	height: 120px;
+	margin-left: 30%;
+	float: left;
+	width: 45%;
+}
+
+.contion .contion-cd .textright {
+	position: relative;
+	height: 120px;
+	float: right;
+}
+
+.contion .contion-cd .textmiddle p {
+	line-height: 20px;
+}
+
+.contion .contion-cd .textmiddle #p1 {
+	position: relative;
+	top: 15px;
+	color: #000000;
+	font-size: 18px;
+}
+
+.contion .contion-cd .textmiddle #p2 {
+	position: relative;
+	top: 15px;
+}
+
+.contion .contion-cd .textmiddle #p3 {
+	position: relative;
+	top: 8px;
+	overflow: hidden;
+	word-break: keep-all;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.contion .contion-cd .textright #p4 {
+	position: relative;
+	right: 10px;
+	top: 35px;
+	color: red;
+	font-size: 18px;
+}
+
+.contion .contion-cd .textright #p5 {
+	position: relative;
+	width: 60px;
+	top: 30px;
+	float: right;
+	color: green;
+}
+
+#date {
+	padding-top: 0px;
+}

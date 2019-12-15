@@ -1,0 +1,183 @@
+* {
+	margin: 0 0 0 0;
+	overflow: hidden;
+}
+
+.hv:hover {
+	cursor: hand;
+}
+
+.bg_game {
+	background: url(../img/game_map.png) center center;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	position: absolute;
+	margin: 0 0 0 0;
+}
+
+.top {
+	width: 100%;
+	height: 20%;
+}
+
+.game_resource {
+	width: 100%;
+	height: 60%;
+	font-size: 45%;
+}
+
+.game_announce {
+	width: 100%;
+	height: 40%;
+}
+
+.map {
+	float: left;
+	width: 100%;
+	height: 70%;
+	margin: 0 0 0 0;
+}
+
+.bottom {
+	width: 100%;
+	height: 10%;
+}
+
+.h_center {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.h_coin {
+	float: left;
+	width: 40%;
+	height: 100%;
+	background: url(../img/coin_and_case.png) no-repeat 10% center;
+	background-size: 85%;
+}
+
+.h_energy {
+	float: left;
+	width: 40%;
+	height: 100%;
+	background-image: url(../img/nl_nlc.png), url(../img/nlt.png),
+		url(../img/add.png);
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-size: 100%, 72% 40%, 11%;
+	background-position: center center, 25% center, 95% center;
+}
+
+#h_energy_add {
+	position: absolute;
+	float: right;
+	left: 70%;
+	width: 10%;
+	height: 7%;
+}
+
+.h_shop {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background: url(../img/shop.png) no-repeat center center;
+	background-size: 80%;
+}
+
+.map ul {
+	float: left;
+	height: 100%;
+	width: 25%;
+	list-style: none;
+}
+
+.map ul li {
+	float: left;
+	width: 100%;
+	height: 20%;
+}
+
+.map .li {
+	display: grid;
+	grid-template-columns: auto auto auto auto; grid-template-rows：auto
+	auto auto auto;
+	height: 100%;
+}
+
+.map .map_people {
+	float: left;
+	position: absolute;
+	/*右下 -- 左上*/
+	left: 75% /*右到左:75 50 25 0*/;
+	bottom: 12% /*下到上：12 26 40 54 68 */;
+}
+
+.map img {
+	transform: scale(0.6);
+	margin: -10%;
+}
+
+.bt_pos {
+	position: relative;
+	float: right;
+	height: 100%;
+	width: 20%;
+}
+
+.bt_dice {
+	background: url(../img/dice.png) no-repeat 50% 50%;
+	background-size: 70%;
+}
+
+.bt_buttom {
+	background: url(../img/but_back.png) no-repeat 50% 50%;
+	background-size: 90%;
+}
+
+.h-artical {
+	position: relative;
+	float: right;
+	*margin: 1% 1% 0 0;
+	opacity: 0.8;
+	height: 100%;
+	width: 100%;
+}
+
+.art_backgrond {
+	background-color: cadetblue;
+	border-radius: 50px;
+	margin: 2% 3% 0 3%;
+	top: 1%;
+	height: 80%;
+	width: auto;
+}
+
+.art_backgrond .art_ebene {
+	float: left;
+	position: absolute;
+	height: 65%;
+	width: 12%;
+	background: url(../img/Ebene_12.png) no-repeat left top;
+	left: 7%;
+	background-size: 80%;
+	margin: 1%;
+}
+
+.art_backgrond .art_msg {
+	position: absolute;
+	float: right;
+	height: 75%;
+	width: 72%;
+	left: 20%;
+}
+
+.art_backgrond span {
+	position: absolute;
+	font-size: 45%;
+	top: 10%;
+	left: 1%;
+	margin: 1%;
+}

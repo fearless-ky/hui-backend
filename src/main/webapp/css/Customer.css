@@ -1,0 +1,127 @@
+.Customer .head {
+	width: auto;
+	height: 44px;
+}
+
+.Customer .contion {
+	background-color: white;
+	height: 120px;
+	width: 100%;
+}
+
+.Customer .contion #p1 {
+	background-color: whitesmoke;
+	position: relative;
+	border-radius: 20px;
+	top: 10px;
+	text-align: center;
+	background-color: floralwhite;
+}
+
+.Customer .contion .img1 {
+	position: relative;
+	height: 80px;
+	background-color: white;
+	float: left;
+	width: 20%;
+}
+
+.Customer .contion .img1 img {
+	position: relative;
+	top: 10px;
+	left: 20px;
+	width: 70px;
+	height: 70px;
+}
+
+.Customer .contion .wenzi {
+	position: relative;
+	width: 60%;
+	float: left;
+	top: 20px;
+	left: 40px;
+	background-color: whitesmoke;
+	height: 50px;
+	border-radius: 20px;
+}
+
+.Customer .contion .wenzi #p2 {
+	position: relative;
+	top: 15px;
+	text-align: center;
+}
+
+.Customer .contion-cc {
+	background-color: white;
+	position: relative;
+	top: 20px;
+	height: 120px;
+	width: 100%;
+}
+
+.Customer .contion-cc #p2 {
+	background-color: whitesmoke;
+	position: relative;
+	border-radius: 20px;
+	top: 10px;
+	text-align: center;
+	background-color: floralwhite;
+}
+
+.Customer .contion-cc .img1 {
+	position: relative;
+	height: 80px;
+	background-color: white;
+	float: right;
+	width: 20%;
+}
+
+.Customer .contion-cc .img1 img {
+	position: relative;
+	top: 10px;
+	right: 20px;
+	width: 70px;
+	height: 70px;
+}
+
+.Customer .contion-cc .wenzi {
+	position: relative;
+	width: 60%;
+	float: left;
+	top: 20px;
+	left: 40px;
+	background-color: whitesmoke;
+	height: 50px;
+	border-radius: 20px;
+}
+
+.Customer .contion-cc .wenzi #p3 {
+	position: relative;
+	top: 15px;
+	text-align: center;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+	top: 345px;
+	height: 100px;
+	background-color: white;
+}
+
+.footer .footer-center {
+	position: relative;
+	top: 30px;
+	padding-left: 20px;
+}
+
+.footer .footer-center #username {
+	width: 250px;
+	background-color: whitesmoke;
+}
+
+.footer .footer-center #button {
+	height: 40px;
+	width: 70px;
+	background-color: wheat;
+}

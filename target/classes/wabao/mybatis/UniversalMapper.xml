@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wabao.dao.UniversalDao">
+	<insert id="insertData">
+		INSERT INTO ${tablename}
+		<foreach collection="fields" index="field" item="fieldVal"
+			separator="," open="(" close=")">${fieldVal}</foreach>
+		VALUES
+		<foreach collection="values" index="key" item="item"
+			separator="," open="(" close=")">#{item}</foreach>
+	</insert>
+	<update id="updateDefault">
+		update wb_user_address set default_address=0 where
+		default_address=1 and uid=#{uid}
+	</update>
+</mapper>
