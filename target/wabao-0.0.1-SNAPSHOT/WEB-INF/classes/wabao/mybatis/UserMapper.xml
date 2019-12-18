@@ -3,10 +3,15 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="wabao.dao.UserDao">
-	<select id="selectUserAll" resultType="wabao.pojo.tb_User">
-		select * from tb_user
+	<select id="selectUserAll" resultType="wabao.pojo.user">
+		select * from user where username = #{username}
 	</select>
-
+	<insert id="insertuser" >
+		insert into user
+		(username,password)
+		values
+		(#{username},#{password})
+	</insert>
 
 
 </mapper>

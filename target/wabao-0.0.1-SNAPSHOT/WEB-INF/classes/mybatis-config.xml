@@ -18,7 +18,8 @@
 	</typeAliases>
 	<!-- 映射器，告诉 MyBatis到哪里去找映射文件 -->
 	 <mappers>
-		<mapper resource="wabao/mybatis/StudentMapper.xml" />
+		 <mapper resource="wabao/mybatis/StudentMapper.xml" />
 		 <mapper resource="wabao/mybatis/BooksMapper.xml" />
+		 <mapper resource="wabao/mybatis/UserMapper.xml" />
 	</mappers>
 </configuration>

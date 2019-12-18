@@ -72,7 +72,7 @@
             <dd  style="display: block;">
                 <ul>
                     <li><a href="book-add.html" title="添加书籍">添加书籍</a></li>
-                    <li><a href="book-del.html" title="删除书籍">删除书籍</a></li>
+                    <li><a href="Books" title="删除书籍">删除书籍</a></li>
                     <li  class="current"><a href="book-find.html" title="查询书籍">查询书籍</a></li>
                     <li><a href="book-modify.html" title="修改书籍">修改书籍</a></li>
                 </ul>
@@ -187,12 +187,7 @@
 <script type="text/javascript" th:inline="none">
     $(function(){
         $('.table-sort').dataTable({
-            "aaSorting": [[ 1, "desc" ]],//默认第几个排序
-            "bStateSave": true,//状态保存
-            "aoColumnDefs": [
-                //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
-                {"orderable":false,"aTargets":[0,8,9]}// 制定列不参与排序
-            ]
+
         });
         $('.table-sort tbody').on( 'click', 'tr', function () {
             if ( $(this).hasClass('selected') ) {

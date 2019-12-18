@@ -1,11 +1,11 @@
 package wabao.dao;
 
-import java.util.List;
-
-import wabao.pojo.tb_User;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.web.bind.annotation.RequestParam;
+import wabao.pojo.user;
 
 public interface UserDao {
 	
-	public List<tb_User> selectUserAll();
-
+	public user selectUserAll(String username);
+	public int insertuser(@Param("username") String username, @Param("password") String password);
 }

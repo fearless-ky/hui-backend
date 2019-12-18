@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="GB2312">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="css/register.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</head>
+<body>
+
+    <form class="form-1" action="" method="post">
+        <span class="glyphicon glyphicon-triangle-left" aria-hidden="true" style=""></span>
+        <img src="img/logo.png">
+        <p class="field">
+
+            <span class="glyphicon glyphicon-lock" aria-hidden="true" style="width: 20px"><a href="login.html"></a></span>
+            <input class="input" type="text" id="username" name="username" placeholder="请输入登录手机号">
+
+        </p>
+        <p class="field1">
+
+            <span class="glyphicon glyphicon-user" aria-hidden="true" style="width: 20px"></span>
+            <input class="input1" type="password" id="password"  name="password" placeholder="请设置密码">
+
+        </p>
+        <div class="field2">
+
+            <span class="glyphicon glyphicon-picture" aria-hidden="true" style="width: 20px"></span>
+            <input class="input2" type="text" id="yanzhengma"  name="yanzhengma" placeholder="请输入图形验证码">
+            <div class="codeDiv" >
+                <img src="" id="Codeimg" style="height: 40px;width: 100px">
+            </div>
+
+        </div>
+
+        <p class="field3">
+
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="width: 20px"></span>
+            <input class="input3" type="text" id="duanxin"  name="duanxin" placeholder="请输入手机验证码">
+
+        </p>
+        <p th:text="${data}" class="p1"></p>
+
+        <p class="submit">
+            <button class="btn" type="submit" name="submit" >下一步</button>
+        </p>
+
+    </form>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#Codeimg").click(function () {
+            $.ajax({
+                url:"CodeImg",
+                async:false,
+                type:"post",
+                contentType:"application/json;charset=utf-8",//指定为json类型
+                success:function (msg) {
+                    if(msg.code == 1)
+                        $("#Codeimg").attr("src","data:image/jpg;base64," + msg.imgStr);
+                }
+            });
+        });
+
+        $(".btn").click(function () {
+            var code = $("#yanzhengma").val();
+
+            $.ajax({
+                url:"CodeVerification",
+                async:false,
+                type:"post",
+                contentType:"application/json;charset=utf-8",//指定为json类型
+                data:JSON.stringify({
+                    "code1":code
+                }),
+                success:function (msg) {
+                    if(msg.code == 0)
+                        $(".p1").text("验证码不正确!")
+                }
+            });
+        });
+
+        if($("#yanzhengma").val().length == 0){
+            console.log(111)
+            $.ajax({
+                url:"CodeImg",
+                async:false,
+                type:"post",
+                contentType:"application/json;charset=utf-8",//指定为json类型
+                success:function (msg) {
+                    if(msg.code == 1)
+                        $("#Codeimg").attr("src","data:image/jpg;base64," + msg.imgStr);
+                }
+            });
+        }
+
+    });
+
+</script>
+
+</body>
+</html>

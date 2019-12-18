@@ -1,11 +1,9 @@
 package wabao.service;
 
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import wabao.dao.UserDao;
-import wabao.pojo.tb_User;
-
+import wabao.pojo.user;
 
 @Service
 public class UserService {
@@ -14,10 +12,14 @@ public class UserService {
 	@Autowired
 	private UserDao userDao;
 	
-	public List<tb_User> selectAll(){
+	public user  selectAll(String username){
 		
-		return userDao.selectUserAll();
-		
+		return userDao.selectUserAll(username);
+	}
+
+	public int  insertuser(String username,String password){
+
+		return userDao.insertuser(username,password);
 	}
 
 }
