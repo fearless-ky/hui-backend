@@ -1,10 +1,7 @@
 package wabao.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -12,7 +9,6 @@ import sun.misc.BASE64Encoder;
 import wabao.util.CodeUtil;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.awt.image.RenderedImage;
 import java.io.*;
 import java.util.HashMap;
@@ -38,7 +34,13 @@ public class CodeController{
         try {
             Map<String, Object> codeMap = CodeUtil.generateCodeAndPic();
             request.getSession().setAttribute("code",codeMap.get("code"));
-            //把RenderedImage流 转换成base64流
+
+            /**
+             *   把RenderedImage流 转换成base64流
+             *   codeMap里面存放的验证的数字和图片流
+             *   通过   ImageIO.write 图片流写入   ByteArrayOutputStream  然后转换成base64
+             */
+
             ByteArrayOutputStream baos = new ByteArrayOutputStream();//io流
             ImageIO.write((RenderedImage) codeMap.get("codePic"), "png", baos);//写入流中
             byte[] buffer = baos.toByteArray();//转换成字节
@@ -55,7 +57,7 @@ public class CodeController{
         return map;
     }
 
-    @ResponseBody
+ /*   @ResponseBody
     @RequestMapping(value = "CodeVerification",method = RequestMethod.POST)
     public Object CodeVerification(@RequestBody String code1,
                                    HttpServletRequest request){
@@ -68,7 +70,7 @@ public class CodeController{
         else
             map.put("code",0);
         return map;
-    }
+    }*/
 
 /*
     public static void main(String[] args) {

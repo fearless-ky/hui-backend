@@ -11,9 +11,12 @@ import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
-
 import javax.imageio.ImageIO;
 
+
+/**
+ *   用于生成验证码图片
+ */
 public class CodeUtil {
     private static int width = 90;// 定义图片的width
     private static int height = 20;// 定义图片的height

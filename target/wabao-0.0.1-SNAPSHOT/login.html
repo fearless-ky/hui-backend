@@ -10,12 +10,13 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/md5.js"></script>
 </head>
 <body>
 
 <form class="form-1" action="loginuser" method="post">
 
-    <img src="img/logo.png">
+    <img src="img/logo.png" class="logo">
     <p class="field">
 
         <span class="glyphicon glyphicon-lock" aria-hidden="true" style="width: 20px"></span>
@@ -37,9 +38,30 @@
         <button class="btn1" type="submit" name="submit"><a href="register.html">注册</a></button>
     </p>
 
+    <p class="wechar">-------------&nbsp;&nbsp;&nbsp;&nbsp;使用微信登录&nbsp;&nbsp;&nbsp;&nbsp;-------------</p>
+    <img src="img/wechat.png" class="wechat">
 </form>
 
+
+
+
 <script type="text/javascript">
+
+    $(document).ready(function(){
+        $(".btn").click(function () {
+            $("#password").val(hex_md5($("#password").val()));
+            $("#password").text(" ");
+            $("#username").text(" ");
+        });
+        $("#username").blur(function () {
+            if($("#username").val().length < 11)
+                $(".p1").text("请输入正确的用户名和手机号!");
+        });
+       $("#password").blur(function () {
+            if($("#username").val().length < 6)
+                $(".p1").text("请输入正确的密码!");
+        });
+    });
 
 </script>
 

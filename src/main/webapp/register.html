@@ -14,9 +14,9 @@
 </head>
 <body>
 
-    <form class="form-1" action="" method="post">
-        <span class="glyphicon glyphicon-triangle-left" aria-hidden="true" style=""></span>
-        <img src="img/logo.png">
+    <form class="form-1" action="registeruser" method="post">
+        <a href="login.html"> <img src="img/return.png" style="width: 40px;" class="logo"></a>
+        <img src="img/logo.png" class="logo">
         <p class="field">
 
             <span class="glyphicon glyphicon-lock" aria-hidden="true" style="width: 20px"><a href="login.html"></a></span>
@@ -47,6 +47,7 @@
         </p>
         <p th:text="${data}" class="p1"></p>
 
+
         <p class="submit">
             <button class="btn" type="submit" name="submit" >下一步</button>
         </p>
@@ -69,7 +70,7 @@
             });
         });
 
-        $(".btn").click(function () {
+/*        $(".btn").click(function () {
             var code = $("#yanzhengma").val();
 
             $.ajax({
@@ -85,10 +86,9 @@
                         $(".p1").text("验证码不正确!")
                 }
             });
-        });
+        });*/
 
-        if($("#yanzhengma").val().length == 0){
-            console.log(111)
+
             $.ajax({
                 url:"CodeImg",
                 async:false,
@@ -99,8 +99,6 @@
                         $("#Codeimg").attr("src","data:image/jpg;base64," + msg.imgStr);
                 }
             });
-        }
-
     });
 
 </script>
